@@ -6,9 +6,8 @@
 def cavityMap(grid):
     n = len(grid)
     # we dont want the edges so -->
-    m = n - 2
-    for i in range(1, m + 1):   # again just skip the edges
-        for j in range(1, m + 1):   # again skip the edges
+    for i in range(1, n - 1):   # just skip the edges for rows
+        for j in range(1, n - 1):   # again skip the edges for columns
             # just make a simple filter
             num = grid[i][j]
             if num > max(grid[i-1][j], grid[i][j-1], grid[i+1][j], grid[i][j+1]):
